@@ -1,7 +1,13 @@
 name: 刷步数
-
+run-name: 刷步数 · ${{ inputs.source }}
 on:
   workflow_dispatch:
+    inputs:
+      source:
+        description: '触发来源'
+        required: false
+        type: string
+        default: 'web'
 
 jobs:
   build:
